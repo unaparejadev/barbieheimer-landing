@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Gotham";
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Gotham Bold.otf") format("opentype");
+}
