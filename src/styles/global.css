@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Barbie';
+  font-family: "Gotham";
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Gotham Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Barbie";
   font-weight: 900;
   font-display: swap;
   font-style: normal;
-  src: url('/fonts/barbie.ttf') format("truetype");
+  src: url("/fonts/barbie.ttf") format("truetype");
 }
