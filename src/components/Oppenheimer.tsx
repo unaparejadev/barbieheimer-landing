@@ -1,9 +1,14 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import classNames from "classnames";
+import React, { useRef } from "react";
+import { useHover } from "usehooks-ts";
 
 const Oppenheimer: React.FC = () => {
+  const hoverRef = useRef(null);
+  const isHover = useHover(hoverRef);
+
   return (
     <div
+      ref={hoverRef}
       className="
       flex 
       flex-col 
@@ -17,9 +22,23 @@ const Oppenheimer: React.FC = () => {
       bg-bottom
       h-screen
       bg-no-repeat
+      relative
+      hover:cursor-pointer
     "
     >
-      <h1 className="text-9xl text-gray-800 font-[Gotham]">Heimer</h1>
+      <div
+        className={
+          isHover ? "" : "absolute w-full h-full z-10 opacity-80 bg-black"
+        }
+      />
+      <h1
+        className={classNames(
+          "text-9xl text-gray-800 drop-shadow-lg font-[Gotham]",
+          isHover ? "" : "opacity-60"
+        )}
+      >
+        Heimer
+      </h1>
     </div>
   );
 };
