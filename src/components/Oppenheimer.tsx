@@ -33,7 +33,7 @@ const Oppenheimer: React.FC = () => {
       />
       <h1
         className={classNames(
-          "text-9xl text-gray-800 drop-shadow-lg font-[Gotham]",
+          "text-9xl text-black drop-shadow-[0_20px_20px_rgba(255,255,255,0.8)] font-[Gotham]",
           isHover ? "" : "opacity-60"
         )}
       >
